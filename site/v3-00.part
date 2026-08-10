@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8e7ec">
+<meta name="description" content="Palevie personal color experience">
+<title>Palevie — Your colors, made for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171214;--rose:#e96992;--rose-deep:#dc5683;--paper:#fff9f7;--blush:#f7e8ec;--line:rgba(85,52,64,.09)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#efdce2;color:var(--ink);font-family:Inter,Arial,sans-serif}
+body{overflow-x:hidden}
+button,a,input{font:inherit}
+a{text-decoration:none;color:inherit}
+button{border:0;cursor:pointer}
+#shell{position:relative;margin:0 auto;width:1024px;height:1536px}
+#stage{position:absolute;left:0;top:0;width:1024px;height:1536px;transform-origin:0 0;overflow:hidden;background:linear-gradient(180deg,#fffaf8 0,#f8e8ed 58%,#f3dce4 100%);box-shadow:0 0 70px rgba(84,46,60,.15)}
+.serif{font-family:"Bodoni Moda",Didot,"Times New Roman",serif}
+
+/* HEADER + HERO */
+.hero{height:493px;position:relative;overflow:hidden;background:linear-gradient(90deg,#fffaf8 0%,#fff9f8 38%,#f7e6e9 100%)}
+.topbar{position:absolute;inset:0 0 auto 0;height:72px;z-index:10}
+.logo{position:absolute;left:36px;top:16px;font-family:"Bodoni Moda",Didot,serif;font-size:35px;line-height:1;font-weight:500;letter-spacing:-2px}
+.logo .spark{display:inline-block;margin-left:3px;color:#e27c9e;font-size:12px;vertical-align:8px;letter-spacing:0}
+.navlinks{position:absolute;left:294px;top:31px;display:flex;gap:34px;font-size:10.5px;font-weight:500}
+.navlinks a{transition:.2s}.navlinks a:hover{color:var(--rose-deep)}
+.top-cta{position:absolute;right:65px;top:20px;width:116px;height:37px;border-radius:999px;background:linear-gradient(180deg,#ef8dae,#df658f);color:#fff;font-size:10px;font-weight:600;box-shadow:0 9px 22px rgba(211,82,127,.25)}
+.menu{position:absolute;right:18px;top:19px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.72);box-shadow:0 5px 18px rgba(80,49,60,.08);display:grid;place-items:center}
+.menu i,.menu i:before,.menu i:after{display:block;width:15px;height:1.5px;background:#4b4245;content:"";position:relative}.menu i:before{position:absolute;top:-5px}.menu i:after{position:absolute;top:5px}
+.hero-copy{position:absolute;left:45px;top:113px;width:370px;z-index:5}
+.hero-title{margin:0;font-family:"Bodoni Moda",Didot,serif;font-size:61px;font-weight:400;line-height:.99;letter-spacing:-3.7px}
+.hero-title em{font-style:italic;color:#e27a9f;font-weight:400}
+.hero-sub{margin:19px 0 0;font-size:14px;line-height:1.55;letter-spacing:-.2px}
+.hero-actions{display:flex;align-items:center;margin-top:26px;height:43px}
+.main-cta{width:164px;height:43px;border-radius:999px;background:linear-gradient(180deg,#ef8eae,#de638e);color:#fff;font-size:11px;font-weight:600;box-shadow:0 12px 25px rgba(211,84,128,.26);display:flex;align-items:center;justify-content:space-between;padding:0 9px 0 18px}
+.main-cta .arrow{width:31px;height:31px;border-radius:50%;background:rgba(255,255,255,.75);color:#403437;display:grid;place-items:center;font-size:17px}
+.social-proof{display:flex;align-items:center;margin-left:22px}
+.avatar-stack{display:flex}
+.avatar-stack img{width:29px;height:29px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-7px}.avatar-stack img:first-child{margin-left:0}
+.proof-copy{margin-left:10px;font-size:8px;line-height:1.35}.proof-copy strong{font-size:11px;font-weight:600}
+.press{margin-top:35px}
+.press-kicker{font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+.press-row{display:flex;align-items:baseline;gap:25px;color:#251e20
