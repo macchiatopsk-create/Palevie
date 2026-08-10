@@ -1,0 +1,30 @@
+;gap:10px}
+.season-card{position:relative;background:rgba(255,255,255,.88);border-radius:17px;overflow:hidden;border:1px solid rgba(111,78,90,.07);box-shadow:0 10px 23px rgba(87,52,65,.07)}
+.season-card.recommended{outline:2px solid rgba(231,107,148,.72);outline-offset:-2px}
+.season-card .rec{position:absolute;right:8px;top:7px;z-index:2;background:#ec7da1;color:#fff;border-radius:999px;padding:4px 7px;font-size:6.5px}
+.season-card img{width:100%;height:180px;object-fit:cover;display:block}
+.season-body{height:80px;padding:8px 9px 10px}
+.season-name{text-align:center;font-family:"Bodoni Moda",serif;font-size:21px;line-height:1;margin-bottom:10px;letter-spacing:-.8px;white-space:nowrap}
+.color-row{display:flex;justify-content:center;gap:5px}.color-row i{width:25px;height:23px;border-radius:5px;display:block}
+.side-arrow{position:absolute;top:151px;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.85);color:#df759a;font-size:21px;box-shadow:0 5px 15px rgba(80,47,59,.08)}.side-arrow.left{left:-15px}.side-arrow.right{right:-15px}
+
+/* TRUST */
+.trust{height:173px;position:relative;background:linear-gradient(180deg,#f6e3e9,#f5e0e7)}
+.trust-panel{position:absolute;left:29px;top:11px;width:966px;height:158px;border-radius:27px;overflow:hidden;background:radial-gradient(ellipse at 88% 30%,rgba(255,255,255,.55),transparent 32%),radial-gradient(ellipse at 18% 90%,rgba(255,255,255,.58),transparent 42%),linear-gradient(135deg,#f8e9ed,#f0cdd9 58%,#edc1d0);border:1px solid rgba(255,255,255,.72);box-shadow:0 14px 34px rgba(94,54,70,.07)}
+.trust-panel:after{content:"";position:absolute;right:-60px;bottom:-80px;width:520px;height:210px;border-radius:50%;border:35px solid rgba(255,255,255,.18);transform:rotate(-13deg)}
+.testimonial{position:absolute;left:48px;top:28px;width:340px;z-index:2}
+.quote-mark{position:absolute;left:0;top:-5px;font-family:"Bodoni Moda",serif;font-size:54px;line-height:1;color:#dc789a}
+.quote-text{margin-left:37px;font-family:"Bodoni Moda",serif;font-size:22px;line-height:1.15;letter-spacing:-.8px}.quote-text em{font-style:italic;color:#dc789a}
+.stars{margin:13px 0 0 37px;color:#d9678e;font-size:13px;letter-spacing:2px}.author{margin:6px 0 0 37px;font-size:8px}
+.trust-grid{position:absolute;left:420px;right:27px;top:30px;display:grid;grid-template-columns:repeat(3,1fr);z-index:2}
+.trust-item{text-align:center;padding:0 16px}.trust-item .circle{width:42px;height:42px;border-radius:50%;margin:0 auto 8px;background:rgba(255,255,255,.66);display:grid;place-items:center;color:#df6d94;font-size:18px}.trust-item h4{font-size:8px;margin:0 0 5px}.trust-item p{font-size:6.8px;line-height:1.5;margin:0;color:#55464b}
+
+/* FOOTER */
+.footer{height:41px;position:relative;background:#f5e0e7;font-size:7.5px}
+.footer .foot-logo{position:absolute;left:47px;top:6px;font-family:"Bodoni Moda",serif;font-size:23px;letter-spacing:-1.2px}.footer .foot-logo span{color:#dc789a}
+.footer-links{position:absolute;left:270px;top:15px;display:flex;gap:43px}
+.social{position:absolute;left:615px;top:8px;display:flex;gap:14px;color:#db7196;font-size:18px;font-weight:600}
+.copyright{position:absolute;right:55px;top:15px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:1000;background:rgba(34,22,27,.36);display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.dialog{width:min(420px,100%);border-radius:24px;background:#fffaf8;padding:28px;box-shadow:0 30px 90px rgba(36,20,28,.27)}.dialog h3{font-family:"Bodoni Moda",serif;font-size:34px;margin:0 0 8px}.dialog p{font-size:13px;line-height:1.55;color:#6d5b63}.dialog form{display:flex;gap:8px;margin-top:18px}.dialog input{flex:1;min-width:0;border:1px solid #ead3dc;border-radius:999px;padding:13px 16px;background:#fff}.dialog button{border-radius:999px;padding:13px 17px;background:#df658f;color:white;font-weight:600}.close{float:right;background:transparent!important;color:#4c3d42!important;padding:0!important;font-size:2
