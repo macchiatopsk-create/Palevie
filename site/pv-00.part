@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8e7ec">
+<meta name="description" content="Palevie personal color experience">
+<title>Palevie — Your colors, made for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171214;--rose:#e96992;--rose-deep:#dc5683;--paper:#fff9f7;--blush:#f7e8ec;--line:rgba(85,52,64,.09)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#efdce2;color:var(--ink);font-family:Inter,Arial,sans-serif}
+body{overflow-x:hidden}
+button,a,input{font:inherit}
+a{text-decoration:none;color:inherit}
+button{border:0;cursor:pointer}
+#shell{position:relative;margin:0 auto;width:1024px;height:1536px}
+#stage{position:absolute;left:0;top:0;width:1024px;height:1536px;transform-origin:0 0;overflow:hidden;background:linear-gradient(180deg,#fffaf8 0,#f8e8ed 58%,#f3dce4 100%);box-shadow:0 0 70px rgba(84,46,60,.15)}
+.serif{font-family:"Bodoni Moda",Didot,"Times New Roman",serif}
+
+/* HEADER + HERO */
+.hero{height:493px;position:relative;overflow:hidden;background:linear-gradient(90deg,#fffaf8 0%,#fff9f8 38%,#f7e6e9 100%)}
+.topbar{position:absolute;inset:0 0 auto 0;height:72px;z-index:10}
+.logo{position:absolute;left:36px;top:16px;font-family:"Bodoni Moda",Didot,serif;font-size:35px;line-height:1;font-weight:500;letter-spacing:-2px}
+.logo .spark{display:inline-block;margin-left:3px;color:#e27c9e;font-size:12px;vertical-align:8px;letter-spacing:0}
+.navlinks{position:absolute;left:294px;top:31px;display:flex;gap:34px;font-size:10.5px;font-weight:500}
+.navlinks a{transition:.2s}.navlinks a:hover{color:var(--rose-deep)}
+.top-cta{position:absolute;right:65px;top:20px;width:116px;height:37px;border-radius:999px;background:linear-gradient(180deg,#ef8dae,#df658f);color:#fff;font-size:10px;font-weight:600;box-shadow:0 9px 22px rgba(211,82,127,.25)}
+.menu{position:absolute;right:18px;top:19px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.72);box-shadow:0 5px 18px rgba(80,49,60,.08);display:grid;place-items:center}
+.menu i,.menu i:before,.menu i:after{display:block;width:15px;height:1.5px;background:#4b4245;content:"";position:relative}.menu i:before{position:absolute;top:-5px}.menu i:after{position:absolute;top:5px}
+.hero-copy{position:absolute;left:45px;top:113px;width:370px;z-index:5}
+.hero-title{margin:0;font-family:"Bodoni Moda",Didot,serif;font-size:61px;font-weight:400;line-height:.99;letter-spacing:-3.7px}
+.hero-title em{font-style:italic;color:#e27a9f;font-weight:400}
+.hero-sub{margin:19px 0 0;font-size:14px;line-height:1.55;letter-spacing:-.2px}
+.hero-actions{display:flex;align-items:center;margin-top:26px;height:43px}
+.main-cta{width:164px;height:43px;border-radius:999px;background:linear-gradient(180deg,#ef8eae,#de638e);color:#fff;font-size:11px;font-weight:600;box-shadow:0 12px 25px rgba(211,84,128,.26);display:flex;align-items:center;justify-content:space-between;padding:0 9px 0 18px}
+.main-cta .arrow{width:31px;height:31px;border-radius:50%;background:rgba(255,255,255,.75);color:#403437;display:grid;place-items:center;font-size:17px}
+.social-proof{display:flex;align-items:center;margin-left:22px}
+.avatar-stack{display:flex}
+.avatar-stack img{width:29px;height:29px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-7px}.avatar-stack img:first-child{margin-left:0}
+.proof-copy{margin-left:10px;font-size:8px;line-height:1.35}.proof-copy strong{font-size:11px;font-weight:600}
+.press{margin-top:35px}
+.press-kicker{font-size:8px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+.press-row{display:flex;align-items:baseline;gap:25px;color:#251e20}
+.press-row span{font-family:"Bodoni Moda",serif;font-size:19px;font-weight:500;letter-spacing:-1px}.press-row span:nth-child(2){font-family:Georgia,serif;font-size:17px}.press-row span:nth-child(4){font-family:Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:-1px}.press-row span:nth-child(5){font-family:Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:-1px}
+.hero-art{position:absolute;left:410px;top:55px;width:614px;height:438px;z-index:2;overflow:hidden}
+.hero-art:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#fff9f8 0,rgba(255,249,248,.74) 3%,transparent 13%);pointer-events:none}
+.hero-art img{width:614px;height:438px;object-fit:cover;display:block}
+
+/* JOURNEY */
+.journey{height:267px;position:relative;background:linear-gradient(180deg,#faf1f3,#f9ecef)}
+.journey-intro{position:absolute;left:45px;top:48px;width:190px}
+.kicker{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#d46188;font-weight:600}
+.journey-intro h2{font-family:"Bodoni Moda",Didot,serif;font-size:30px;line-height:1.09;font-weight:400;letter-spacing:-1.6px;margin:12px 0 0}.journey-intro h2 em{font-style:normal;color:#dc789a}
+.step{position:absolute;top:27px;height:231px;border-radius:19px;background:rgba(255,255,255,.59);border:1px solid rgba(255,255,255,.75);box-shadow:0 13px 30px rgba(98,59,73,.055);overflow:hidden;padding:25px 20px}
+.step.one{left:250px;width:207px}.step.two{left:466px;width:238px}.step.three{left:742px;width:253px}
+.badge{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#e46f98;color:#fff;font-size:11px;font-weight:600}
+.step h3{font-size:12px;margin:15px 0 8px;font-weight:600}.step p{font-size:8.5px;line-height:1.65;margin:0;color:#3f3538;max-width:116px}
+.step.one img{position:absolute;right:12px;bottom:20px;width:87px;height:180px;object-fit:cover;border-radius:13px}
+.step.two img{position:absolute;right:10px;bottom:14px;width:130px;height:166px;object-fit:cover}
+.step.three img{position:absolute;right:11px;top:46px;width:139px;height:157px;object-fit:cover}
+.between{position:absolute;top:125px;font-size:25px;font-weight:300}.between.a{left:458px}.between.b{left:718px}
+
+/* FEATURE BAND */
+.feature{height:225px;position:relative;background:linear-gradient(180deg,#f9ecef,#f8e8ed)}
+.feature-panel{position:absolute;left:29px;top:7px;width:966px;height:207px;border-radius:27px;background:rgba(255,255,255,.57);border:1px solid rgba(255,255,255,.82);box-shadow:0 15px 35px rgba(96,56,71,.07);overflow:hidden}
+.benefit-grid{position:absolute;left:25px;top:31px;width:430px;height:147px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.benefit{text-align:center;padding:0 5px}.benefit .icon{height:42px;display:grid;place-items:center;color:#d36a8e;font-size:30px;font-family:Georgia,serif}.benefit h4{font-size:10px;line-height:1.35;margin:7px 0 8px}.benefit p{font-size:7.5px;line-height:1.55;margin:0;color:#514448}
+.fit-copy{position:absolute;left:485px;top:28px;width:151px}
+.fit-copy h2{font-family:"Bodoni Moda",Didot,serif;font-size:29px;line-height:1.03;font-weight:400;letter-spacing:-1.5px;margin:0}.fit-copy em{font-style:italic;color:#df7c9d}.learn{font-size:8px;margin-top:24px;display:flex;gap:10px;align-items:center}.learn span{font-size:21px}
+.beauty-art{position:absolute;right:0;top:0;width:357px;height:229px}.beauty-art img{width:357px;height:229px;object-fit:cover}
+
+/* HARMONY */
+.harmony{height:337px;position:relative;background:linear-gradient(180deg,#f8e8ed,#f6e3e9)}
+.harmony-panel{position:absolute;left:29px;top:13px;width:966px;height:323px;border-radius:27px;background:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.8);box-shadow:0 14px 34px rgba(94,54,70,.07)}
+.harmony-title{position:absolute;left:25px;top:17px;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase}
+.season-grid{position:absolute;left:22px;right:22px;top:48px;height:260px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.season-card{position:relative;background:rgba(255,255,255,.88);border-radius:17px;overflow:hidden;border:1px solid rgba(111,78,90,.07);box-shadow:0 10px 23px rgba(87,52,65,.07)}
+.season-card.recommended{outline:2px solid rgba(231,107,148,.72);outline-offset:-2px}
+.season-card .rec{position:absolute;right:8px;top:7px;z-index:2;background:#ec7da1;color:#fff;border-radius:999px;padding:4px 7px;font-size:6.5px}
+.season-card img{width:100%;height:180px;object-fit:cover;display:block}
+.season-body{height:80px;padding:8px 9px 10px}
+.season-name{text-align:center;font-family:"Bodoni Moda",serif;font-size:21px;line-height:1;margin-bottom:10px;letter-spacing:-.8px;white-space:nowrap}
+.color-row{display:flex;justify-content:center;gap:5px}.color-row i{width:25px;height:23px;border-radius:5px;display:block}
+.side-arrow{position:absolute;top:151px;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.85);color:#df759a;font-size:21px;box-shadow:0 5px 15px rgba(80,47,59,.08)}.side-arrow.left{left:-15px}.side-arrow.right{right:-15px}
+
+/* TRUST */
+.trust{height:173px;position:relative;background:linear-gradient(180deg,#f6e3e9,#f5e0e7)}
+.trust-panel{position:absolute;left:29px;top:11px;width:966px;height:158px;border-radius:27px;overflow:hidden;background:radial-gradient(ellipse at 88% 30%,rgba(255,255,255,.55),transparent 32%),radial-gradient(ellipse at 18% 90%,rgba(255,255,255,.58),transparent 42%),linear-gradient(135deg,#f8e9ed,#f0cdd9 58%,#edc1d0);border:1px solid rgba(255,255,255,.72);box-shadow:0 14px 34px rgba(94,54,70,.07)}
+.trust-panel:after{content:"";position:absolute;right:-60px;bottom:-80px;width:520px;height:210px;border-radius:50%;border:35px solid rgba(255,255,255,.18);transform:rotate(-13deg)}
+.testimonial{position:absolute;left:48px;top:28px;width:340px;z-index:2}
+.quote-mark{position:absolute;left:0;top:-5px;font-family:"Bodoni Moda",serif;font-size:54px;line-height:1;color:#dc789a}
+.quote-text{margin-left
