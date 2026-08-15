@@ -395,29 +395,25 @@ img{display:block;max-width:100%}
   </footer>
 </div>
 
+
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-// Waitlist form. Front-end only for now — wire this to a real list
-// (Formspree / Buttondown / Supabase) before launch so submissions are stored.
-document.getElementById('wlForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var email = document.getElementById('wlEmail').value.trim();
-  if(!email || email.indexOf('@') === -1){
-    document.getElementById('wlEmail').focus();
-    return;
-  }
-  document.getElementById('wlForm').style.display = 'none';
-  document.getElementById('wlOk').style.display = 'block';
-});
-
-// Season cards: click to highlight
-document.querySelectorAll('.season').forEach(function(card){
-  card.addEventListener('click', function(){
-    document.querySelectorAll('.season').forEach(function(c){ c.classList.remove('on'); });
-    card.classList.add('on');
+(function(){
+  var SB_URL="https://nutfgkxaddvidqrcnvyj.supabase.co";
+  var SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51dGZna3hhZGR2aWRxcmNudnlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2Njg1NzcsImV4cCI6MjEwMjI0NDU3N30.sUux56LL2IMHSHten06xGgm_v_6QW7kRmxdSIe_bX8w";
+  var f=document.getElementById("wlForm"),e=document.getElementById("wlEmail"),ok=document.getElementById("wlOk");
+  if(!f)return;
+  f.addEventListener("submit",async function(ev){
+    ev.preventDefault();
+    var email=(e.value||"").trim().toLowerCase();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){e.focus();return}
+    var btn=f.querySelector("button");btn.disabled=true;btn.textContent="Joining…";
+    try{
+      var r=await fetch(SB_URL+"/rest/v1/waitlist",{method:"POST",headers:{"apikey":SB_KEY,"Authorization":"Bearer "+SB_KEY,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify({email:email,source:"landing"})});
+      if(r.ok||r.status===409){f.style.display="none";ok.style.display="block";}
+      else{btn.disabled=false;btn.innerHTML='Join the waitlist <span class="arrow">→</span>';alert("Something went wrong — please try again.");}
+    }catch(_){btn.disabled=false;btn.innerHTML='Join the waitlist <span class="arrow">→</span>';alert("Network error — please try again.");}
   });
-});
+})();
 </script>
 </body>
 </html>
